@@ -1,0 +1,35 @@
+body {
+    background-color: lightgray;
+  }
+
+  .quiz-container {
+    max-width: 600px;
+    margin: 200px auto; 
+    padding: 50px;
+    background-color: white;
+  }
+
+  .options{
+    border: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    gap: 20px;
+  }
+
+  button.option {
+    background-color:blue;
+    color:white;
+    text-align: center;  
+    width: 20%;
+    padding: 10px;
+  }
+
+  #question {
+    text-align: center;
+    margin-bottom: 30px;
+  }
