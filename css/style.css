@@ -38,3 +38,17 @@ body {
   {
    background-color:rgb(255, 2, 124);
   }
+
+  button.option.right {
+    background-color: green;
+    color: white;
+  }
+  
+  button.option.wrong {
+    background-color: red;
+    color: white;
+  }
+  
+  button.option:not(.right):not(.wrong) {
+    background-color: blue;
+  }

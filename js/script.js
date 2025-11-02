@@ -37,7 +37,7 @@ function loadQuestion() {
 
   optionsElements.forEach((button, index) => {
     button.textContent = currentQuestion.options[index];
-    button.classList.remove("correct", "wrong");
+    button.classList.remove("right", "wrong");
   });
 
   nextButton.style.display = "none";
@@ -48,7 +48,7 @@ function selectAnswer(selectedIndex) {
 
   optionsElements.forEach((button, index) => {
     if (index === correctIndex) {
-      button.classList.add("correct");
+      button.classList.add("right");
     } else {
       button.classList.add("wrong");
     }
@@ -58,7 +58,7 @@ function selectAnswer(selectedIndex) {
     score++;
   }
 
-  nextButton.style.display = "block";
+  nextButton.style.display = "inline-block";
 }
 
 function nextQuestion() {
@@ -77,3 +77,8 @@ function showScore() {
 }
 
 loadQuestion();
+
+nextButton.addEventListener("click", nextQuestion);
+optionsElements.forEach((button, index) => {
+  button.addEventListener("click", () => selectAnswer(index));
+});
